@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Linterna (Hágase la luz)
+    </ion-title>
+    <ion-buttons end>
+    <button (click)="showPrompt()">
+      <ion-icon name="information-circle"></ion-icon>
+    </button>
+  </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding class="contenido">
+
+<button outline celeste fab-center>
+<ion-icon name="{{batteryStatus}}"></ion-icon>
+  {{batteryLevel}}%
+</button>
+
+<button (click)="cambio()" class="power button-fab {{bc_color}}">
+   <ion-icon name="power"></ion-icon>
+</button>
+
+
+<button (click)="salir()" clear class="exit">
+  <ion-icon name="close" celeste></ion-icon>
+</button>
+
+</ion-content>
